@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Js-sha1 : A simple SHA1 hash function for JavaScript supports UTF-8 encoding.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Js-sha1</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/emn178/js-sha1">View on GitHub</a>
+
+          <h1 id="project_title">Js-sha1</h1>
+          <h2 id="project_tagline">A simple SHA1 hash function for JavaScript supports UTF-8 encoding.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/emn178/js-sha1/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/emn178/js-sha1/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="js-sha1" class="anchor" href="#js-sha1" aria-hidden="true"><span class="octicon octicon-link"></span></a>js-sha1</h1>
+
+<p><a href="https://travis-ci.org/emn178/js-sha1"><img src="https://api.travis-ci.org/emn178/js-sha1.png" alt="Build Status"></a>
+<a href="https://coveralls.io/r/emn178/js-sha1?branch=master"><img src="https://coveralls.io/repos/emn178/js-sha1/badge.png?branch=master" alt="Build Status"></a><br>
+<a href="https://nodei.co/npm/js-sha1/"><img src="https://nodei.co/npm/js-sha1.png?stars&amp;downloads" alt="NPM"></a><br>
+A simple SHA1 hash function for JavaScript supports UTF-8 encoding.</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="http://emn178.github.io/online-tools/sha1.html">SHA1 Online</a></p>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p><a href="https://raw.github.com/emn178/js-sha1/master/build/sha1.min.js">Compress</a><br>
+<a href="https://raw.github.com/emn178/js-sha1/master/src/sha1.js">Uncompress</a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>You can also install js-sha1 by using Bower.</p>
+
+<pre><code>bower install js-sha1
+</code></pre>
+
+<p>For node.js, you can use this command to install:</p>
+
+<pre><code>npm install js-sha1
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre>sha1(<span class="pl-s1"><span class="pl-pds">'</span>Message to hash<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>If you use node.js, you should require the module first:</p>
+
+<div class="highlight highlight-JavaScript"><pre>sha1 <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>js-sha1<span class="pl-pds">'</span></span>);</pre></div>
+
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<h4>
+<a id="sha1str-asciionly" class="anchor" href="#sha1str-asciionly" aria-hidden="true"><span class="octicon octicon-link"></span></a>sha1(str, asciiOnly)</h4>
+
+<p>Hash string to sha1, set asciiOnly to true for better performace if you ensure input is ascii.</p>
+
+<h5>
+<a id="str-string" class="anchor" href="#str-string" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>str: <code>String</code></em>
+</h5>
+
+<p>String to hash.</p>
+
+<h5>
+<a id="asciionly-boolean-default-false" class="anchor" href="#asciionly-boolean-default-false" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>asciiOnly: <code>Boolean</code> (default: <code>false</code>)</em>
+</h5>
+
+<p>Specify the string encoding is ASCII.</p>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>sha1(<span class="pl-s1"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>);
+sha1(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps over the lazy dog<span class="pl-pds">'</span></span>);
+sha1(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps over the lazy dog.<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Output</p>
+
+<pre><code>da39a3ee5e6b4b0d3255bfef95601890afd80709
+2fd4e1c67a2d28fced849ee1bb76e7391b93eb12
+408d94384216f890ff7a0c3528e8bed1e0b01621
+</code></pre>
+
+<p>It also supports UTF-8 encoding:</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>sha1(<span class="pl-s1"><span class="pl-pds">'</span>中文<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>Output</p>
+
+<pre><code>7be2d2d20c106eee0836c9bc2b939890a78e8fb3
+</code></pre>
+
+<h2>
+<a id="extensions" class="anchor" href="#extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extensions</h2>
+
+<h3>
+<a id="jquery" class="anchor" href="#jquery" aria-hidden="true"><span class="octicon octicon-link"></span></a>jQuery</h3>
+
+<p>If you prefer jQuery style, you can add following code to add a jQuery extension.</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>jQuery.sha1 <span class="pl-k">=</span> sha1</pre></div>
+
+<p>And then you could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre>$.sha1(<span class="pl-s1"><span class="pl-pds">'</span>message<span class="pl-pds">'</span></span>);</pre></div>
+
+<h3>
+<a id="prototype" class="anchor" href="#prototype" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prototype</h3>
+
+<p>If you prefer prototype style, you can add following code to add a prototype extension.</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="pl-s3">String</span>.<span class="pl-sc">prototype</span>.<span class="pl-en">sha1</span> <span class="pl-k">=</span> <span class="pl-st">function</span>() {
+  <span class="pl-k">return</span> sha1(<span class="pl-v">this</span>);
+};</pre></div>
+
+<p>And then you could use like this:</p>
+
+<div class="highlight highlight-JavaScript"><pre><span class="pl-s1"><span class="pl-pds">'</span>message<span class="pl-pds">'</span></span>.sha1();</pre></div>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The project is released under the <a href="http://www.opensource.org/licenses/MIT">MIT license</a>.</p>
+
+<h2>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h2>
+
+<p>The project's website is located at <a href="https://github.com/emn178/js-sha1">https://github.com/emn178/js-sha1</a><br>
+Author: <a href="mailto:emn178@gmail.com">emn178@gmail.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Js-sha1 maintained by <a href="https://github.com/emn178">emn178</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44208259-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
