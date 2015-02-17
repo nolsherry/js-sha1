@@ -34,8 +34,8 @@
         <h1>
 <a id="js-sha1" class="anchor" href="#js-sha1" aria-hidden="true"><span class="octicon octicon-link"></span></a>js-sha1</h1>
 
-<p><a href="https://travis-ci.org/emn178/js-sha1"><img src="https://api.travis-ci.org/emn178/js-sha1.png" alt="Build Status"></a>
-<a href="https://coveralls.io/r/emn178/js-sha1?branch=master"><img src="https://coveralls.io/repos/emn178/js-sha1/badge.png?branch=master" alt="Build Status"></a><br>
+<p><a href="https://travis-ci.org/emn178/js-sha1"><img src="https://travis-ci.org/emn178/js-sha1.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/r/emn178/js-sha1?branch=master"><img src="https://coveralls.io/repos/emn178/js-sha1/badge.svg?branch=master" alt="Coverage Status"></a><br>
 <a href="https://nodei.co/npm/js-sha1/"><img src="https://nodei.co/npm/js-sha1.png?stars&amp;downloads" alt="NPM"></a><br>
 A simple SHA1 hash function for JavaScript supports UTF-8 encoding.</p>
 
@@ -74,26 +74,6 @@ A simple SHA1 hash function for JavaScript supports UTF-8 encoding.</p>
 
 <div class="highlight highlight-JavaScript"><pre>sha1 <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>js-sha1<span class="pl-pds">'</span></span>);</pre></div>
 
-<h3>
-<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h3>
-
-<h4>
-<a id="sha1str-asciionly" class="anchor" href="#sha1str-asciionly" aria-hidden="true"><span class="octicon octicon-link"></span></a>sha1(str, asciiOnly)</h4>
-
-<p>Hash string to sha1, set asciiOnly to true for better performace if you ensure input is ascii.</p>
-
-<h5>
-<a id="str-string" class="anchor" href="#str-string" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>str: <code>String</code></em>
-</h5>
-
-<p>String to hash.</p>
-
-<h5>
-<a id="asciionly-boolean-default-false" class="anchor" href="#asciionly-boolean-default-false" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>asciiOnly: <code>Boolean</code> (default: <code>false</code>)</em>
-</h5>
-
-<p>Specify the string encoding is ASCII.</p>
-
 <h2>
 <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 
@@ -121,6 +101,25 @@ sha1(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps 
 <pre><code>7be2d2d20c106eee0836c9bc2b939890a78e8fb3
 </code></pre>
 
+<p>It also supports byte Array or Uint8Array input:</p>
+
+<p>Code</p>
+
+<div class="highlight highlight-JavaScript"><pre>sha1([]);
+sha1(<span class="pl-k">new</span> <span class="pl-en">Uint8Array</span>([]));</pre></div>
+
+<p>Output</p>
+
+<pre><code>da39a3ee5e6b4b0d3255bfef95601890afd80709
+da39a3ee5e6b4b0d3255bfef95601890afd80709
+</code></pre>
+
+<h2>
+<a id="benchmark" class="anchor" href="#benchmark" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmark</h2>
+
+<p><a href="http://jsperf.com/sha1-speed-test/11">UTF8</a><br>
+<a href="http://jsperf.com/sha1-speed-test/10">ASCII</a></p>
+
 <h2>
 <a id="extensions" class="anchor" href="#extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extensions</h2>
 
@@ -131,7 +130,7 @@ sha1(<span class="pl-s1"><span class="pl-pds">'</span>The quick brown fox jumps 
 
 <p>Code</p>
 
-<div class="highlight highlight-JavaScript"><pre>jQuery.sha1 <span class="pl-k">=</span> sha1</pre></div>
+<div class="highlight highlight-JavaScript"><pre>jQuery.sha1 <span class="pl-k">=</span> sha1;</pre></div>
 
 <p>And then you could use like this:</p>
 
