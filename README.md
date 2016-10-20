@@ -1,6 +1,7 @@
 # js-sha1
 [![Build Status](https://travis-ci.org/emn178/js-sha1.svg?branch=master)](https://travis-ci.org/emn178/js-sha1)
-[![Coverage Status](https://coveralls.io/repos/emn178/js-sha1/badge.svg?branch=master)](https://coveralls.io/r/emn178/js-sha1?branch=master)  
+[![Coverage Status](https://coveralls.io/repos/emn178/js-sha1/badge.svg?branch=master)](https://coveralls.io/r/emn178/js-sha1?branch=master)
+[![CDNJS](https://img.shields.io/cdnjs/v/js-sha1.svg)](https://cdnjs.com/libraries/js-sha1/)
 [![NPM](https://nodei.co/npm/js-sha1.png?stars&downloads)](https://nodei.co/npm/js-sha1/)  
 A simple SHA1 hash function for JavaScript supports UTF-8 encoding.
 
